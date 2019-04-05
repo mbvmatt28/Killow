@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+</head>
+
+
+
+<body>
+    <div class="field">
+        <div class="control">
+            <input class="input is-primary" type="text" placeholder="Primary input">
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <input class="input is-info" type="text" placeholder="Info input">
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <input class="input is-success" type="text" placeholder="Success input">
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <input class="input is-warning" type="text" placeholder="Warning input">
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <input class="input is-danger" type="text" placeholder="Danger input">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $.ajax({
+        url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
+        type: "GET",
+        data: {
+            "$limit": 5000,
+            "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
+        }
+    }).done(function(data) {
+        alert("Retrieved " + data.length + " records from the dataset!");
+        console.log(data);
+    });
+</script>
+
+</html>
