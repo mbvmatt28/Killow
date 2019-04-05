@@ -18,7 +18,7 @@
     <div class="background">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand"
-                style=" position:relative; left: 620px; top: -5px; height: 100%; font-weight: bold; font-size: 32px"
+                style="padding: 5px; position:relative; left: 620px; top: -5px; height: 100%; font-weight: bold; font-size: 32px"
                 href="#">Killow</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,87 +34,43 @@
                     <li class="nav-item">
                         <a class="nav-link"
                             style="position:relative; left: 10px; top: 5px; height: 100%; font-size: 16px"
-                            href="mm.html">Murder Map</a>
+                            href="/assets/images/mm.jpg">Murder Map</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
 
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <div class="card bg-dark text-white">
-        <img src="./assets/images/hh7.jpg" class="ah-img" alt="...">
-        <div class="card-img-overlay">
-            <h5 class="card-title"
-                style="position: relative; top: 50px; padding: 5px; text-align: center; height: 100%; font-weight: bold; font-size: 50px">
-                Killer Houses in Kansas City</h5>
-            <p class="card-text"
-                style="position: relative; top: -380px; padding: 5px; text-align: center; height: 100%; font-size: 30px">
-                They'll leave you breathless.</p>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Killow</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+
+
+
+
+
+
+
+    <div id="murdermap" class="card bg-dark text-white">
+        <img src="./assets/images/mm.jpg" class="ah-img" style=" position:relative; left: 430px; height: 500px ; width: 500px; background-color= black; >
+                <div class=" card-img-overlay">
     </div>
-    <br>
-    <input id="address-input" class="form-control form-control-lg"
-        style="position: absolute; top: 300px; left: 340px; width: 50%;" type="text"
-        placeholder="Enter address if you dare!">
 
-    </div>
-    <br><br>
-    <div>
 
-        <h1>Houses to die for.</h1>
 
-    </div>
 
-    <br><br>
 
-    <div class="card-deck">
-            <div class="card">
-              <img class="card-img-top" src="./assets/images/mh.jpg" style=" height: 270px; width: 425px">
-              <div class="card-body">
-                <h5 class="card-title">Murder Houses</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <a href="#" class="btn btn-primary">Search</a>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="./assets/images/hh2.jpg" style=" height: 270px; width: 425px">
-              <div class="card-body">
-                <h5 class="card-title">Haunted Houses</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              </div>
-              <a href="#" class="btn btn-primary">Search</a>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="./assets/images/hh4.jpg"  style=" height: 270px; width: 425px">
-              <div class="card-body">
-                <h5 class="card-title">Deaths Door</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              </div>
-              <a href="#" class="btn btn-primary">Search</a>
-            </div>
-          </div>
-
-  
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $.ajax({
-            url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
-            type: "GET",
-            data: {
-                "$limit": 5000,
-                "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
-            }
-        }).done(function (data) {
-            alert("Retrieved " + data.length + " records from the dataset!");
-            console.log(data);
-        });
-    </script>
-
-<!-- Footer -->
+   <!-- Footer -->
 <footer class="page-footer font-small mdb-color pt-4">
 
         <!-- Footer Links -->
@@ -248,6 +204,15 @@
     
       </footer>
       <!-- Footer -->
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 </body>
