@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="map.css">
 </head>
 
 
@@ -55,16 +56,44 @@
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
 
+    <div id="map"></div>
+    <script>
+      function initMap(){
+          //Map Options
+          var options = {
+              zoom:10,
+              center:{lat:39.0997,lng:-94.5786}
+          }
+          //New Map
+          var map = new 
+          google.maps.Map(document.getElementById('map'), options)
+
+          //Add Marker 
+          var marker = new
+          google.maps.Marker({
+              position:{lat:38.9822,lng:-94.6708},
+              map:map,
+          });
+          var infoWindow = new
+          google.maps.InfoWindow({
+              content: '<img src="assets/images/Scary-Houses-in-Bangalore.jpg" style="height: 200px ; width: 250px; alt="Scary House">'
+          });
+          marker.addListener('click', function(){
+              infoWindow.open(map, marker);
+          })
+
+      }
+  </script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&callback=initMap">
+  </script>
+</body>
 
 
 
 
-
-
-    <div id="murdermap" class="card bg-dark text-white">
-        <img src="./assets/images/mm.jpg" class="ah-img" style=" position:relative; left: 430px; height: 500px ; width: 500px; background-color= black; >
-                <div class=" card-img-overlay">
-    </div>
+  
 
 
 
