@@ -39,35 +39,38 @@
         </div>
     </div>
 
+    <div id="response"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $.ajax({
+                url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
+                type: "GET",
+                data: {
+                    "$limit": "9999999",
+                    "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
+                }
+            }).done(function(response) {
 
+                const arr = Object.keys(response).map((key) => [
+                    [key, response[[key]]]
+                ]);
+                console.log(arr);
 
-
-
-
-
-
-
-
-
+                console.log("Retrieved " + response.length + " records from the dataset!");
+            })
+            // $('#response').text(JSON.stringify(response));
+    </script>
 
 </body>
 
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    $.ajax({
-        url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
-        type: "GET",
-        data: {
-            "$limit": 5000,
-            "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
-        }
-    }).done(function(data) {
-        alert("Retrieved " + data.length + " records from the dataset!");
-        console.log(data);
-    });
-</script>
+
+
+
+
+
+
 
 </html>
