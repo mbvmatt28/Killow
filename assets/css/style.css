@@ -10,3 +10,13 @@
 h1 {
     text-align: center;
 }
+#logo{
+width: 125px;
+height: 125px relative;
+padding: -10px;
+margin: -10px;
+display: flex;
+justify-content: space-around;
+margin-left: 45%;
+
+}
