@@ -250,21 +250,42 @@
           var map = new 
           google.maps.Map(document.getElementById('map'), options)
 
-          //Add Marker 
-          var marker = new
-          google.maps.Marker({
-              position:{lat:39.021553,lng:-94.572923},
-              position:{lat:39.034093,lng:-94.567583},
+
+          //Array of Markers
+          var markers = [
+          {
+            coords:{lat:39.034093,lng:-94.567583},
+            content:'<img src="assets/images/Scary-Houses-in-Bangalore.jpg" style="height: 200px ; width: 250px; alt="Scary House">'
+          },
+          {
+            coords:{lat:39.032761,lng:-94.512678},
+            content:'<img src="assets/images/fl.jpg" style="height: 200px ; width: 250px; alt="Scary House2">'
+          },
+          ];
+
+          //Loop through markers
+          for(var i = 0; i < markers.length; i++){
+            addMarker(markers[i]);
+          }
+
+          //Add Marker Function
+          function addMarker(props){
+            var marker = new
+              google.maps.Marker({
+              position:props.coords,
               map:map,
           });
-          var infoWindow = new
-          google.maps.InfoWindow({
-              content: '<img src="assets/images/Scary-Houses-in-Bangalore.jpg" style="height: 200px ; width: 250px; alt="Scary House">'
+
+            if(props.content){
+              var infoWindow = new
+              google.maps.InfoWindow({
+              content: props.content
           });
-          marker.addListener('click', function(){
+              marker.addListener('click', function(){
               infoWindow.open(map, marker);
           })
-
+            }
+          }
       }
   </script>
 
