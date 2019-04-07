@@ -5,53 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/fl.png">
     <title>Killow</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Poller+One" rel="stylesheet">
 </head>
 
 
 
 <body>
-    <div class="background">
-        <nav class="navbar navbar-expand-lg d-flex justify-content-center" style="background-color: black;">
-            <img id="logo" class="navbar-brand" src="assets/images/fl.jpg"/> 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end justify-content-baseline" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-danger" style="font-size: 16px" href="index.html">Home <span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-danger" style="font-size: 16px" href="mm.html">Murder Map</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+
+    <header>
+        <div id= "head">
+            <a id="hm" class= "col-sm" style="font-size: 16px" href="index.html">Home</a>
+            <img href="index.html" class= "col-sm" id="logo" src="assets/images/fl.jpg" />
+            <a id="mm" class=" col-sm" style="font-size: 16px" href="mm.html">Murder Map</a>
+        </div>
+    </header>
+
 
 
     <div class="card bg-dark text-white border border-0">
         <img src="./assets/images/hh7.jpg" class="ah-img" alt="...">
         <div class="card-img-overlay">
-            <h5 class="card-title" style="padding: 10px; text-align: center; font-weight: bold; font-size: 50px">
-                Killer Houses in Kansas City</h5>
-            <p class="card-text" style="padding: 10px; text-align: center; font-size: 30px">
-                They'll leave you breathless.</p>
-                <input id="address-input" class="padding: 10px; form-control form-control-lg" style= "width: 60%; margin: auto" type="text" placeholder="Enter address if you dare!">
+            <br>
+            <h5 id="d" class="card-title" style="padding: 10px; text-align: center; font-weight: bold;">
+                   Houses to die for</h5>
+           <br>
+            <input id="address-input" class="padding: 10px; form-control form-control-lg"
+                style="width: 60%; margin: auto" type="text" placeholder="Enter address if you dare...">
 
         </div>
     </div>
     <br>
-   
-    </div>
-    <br><br>
-    <div>
+    <h6 class="card-text" style="padding: 10px; text-align: center; font-size: 30px">
+            They'll leave you breathless.</h6>
+    
+    <br>
+    
 
-        <h1>Houses to die for.</h1>
+   
 
     </div>
 
@@ -61,194 +58,82 @@
         <div class="card">
             <img class="card-img-top" src="./assets/images/mh.jpg" style=" height: 270px; width: 425px">
             <div class="card-body">
-                <h5 class="card-title">Murder Houses</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">Murder House</h5>
+                <p class="card-text">This house has the highest murder count in the city.</p>
             </div>
-            <a href="#" class="btn btn-primary">Search</a>
+            <a href="#" class="btn btn-danger">Search</a>
         </div>
         <div class="card">
-            <img class="card-img-top" src="./assets/images/hh2.jpg" style=" height: 270px; width: 425px">
+            <img class="card-img-top" src="./assets/images/fb.jpg" style=" height: 270px; width: 425px">
             <div class="card-body">
-                <h5 class="card-title">Haunted Houses</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <h5 class="card-title">Fresh blood</h5>
+                <p class="card-text">The most recent homicide happened here.</p>
             </div>
-            <a href="#" class="btn btn-primary">Search</a>
+            <a href="#" class="btn btn-danger">Search</a>
         </div>
         <div class="card">
-            <img class="card-img-top" src="./assets/images/hh4.jpg" style=" height: 270px; width: 425px">
+            <img class="card-img-top" src="./assets/images/dz.jpeg" style=" height: 270px; width: 425px">
             <div class="card-body">
-                <h5 class="card-title">Deaths Door</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <h5 class="card-title">Danger Zone</h5>
+                <p class="card-text">This zip code has the most murders. Proceed with caution.</p>
             </div>
-            <a href="#" class="btn btn-primary">Search</a>
+            <a href="#" class="btn btn-danger">Search</a>
         </div>
     </div>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <br><br>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        // jQuery.ajaxPrefilter(function(options) {
-        //     if (options.crossDomain && jQuery.support.cors) {
-        //         options.url = 'https://cors-anywhere.herokuapp.com/' +
-        //             `${options.url}`;
-        //     }
-        // });
-        $.ajax({
-            url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
-            type: "GET",
-            data: {
-                "$limit": "9999999",
-                "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
-            },
-        }).done(function(response) {
 
-            const arr = Object.keys(response).map((key) => [
-                [key, response[[key]]]
-            ]);
-            console.log(arr);
+   
+<footer class="page-footer font-small special-color-dark pt-4 text danger">
 
-            console.log("Retrieved " + response.length + " records from the dataset!");
-        })
-    </script>
-
-    <!-- Footer -->
-    <footer class="page-footer font-small pt-4" style="background-color: black;>
-
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left">
-
-            <!-- Footer links -->
-            <div class="row text-center text-md-left mt-3 pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
-                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <!-- Grid column -->
-
-                <hr class="w-100 clearfix d-md-none">
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-                    <p>
-                        <a href="#!">MDBootstrap</a>
-                    </p>
-                    <p>
-                        <a href="#!">MDWordPress</a>
-                    </p>
-                    <p>
-                        <a href="#!">BrandFlow</a>
-                    </p>
-                    <p>
-                        <a href="#!">Bootstrap Angular</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <hr class="w-100 clearfix d-md-none">
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-                    <p>
-                        <a href="#!">Your Account</a>
-                    </p>
-                    <p>
-                        <a href="#!">Become an Affiliate</a>
-                    </p>
-                    <p>
-                        <a href="#!">Shipping Rates</a>
-                    </p>
-                    <p>
-                        <a href="#!">Help</a>
-                    </p>
-                </div>
-
-                <!-- Grid column -->
-                <hr class="w-100 clearfix d-md-none">
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p>
-                        <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                    <p>
-                        <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                    <p>
-                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p>
-                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Footer links -->
-
-            <hr>
-
-            <!-- Grid row -->
-            <div class="row d-flex align-items-center">
-
-                <!-- Grid column -->
-                <div class="col-md-7 col-lg-8">
-
-                    <!--Copyright-->
-                    <p class="text-center text-md-left">© 2018 Copyright:
-                        <a href="https://mdbootstrap.com/education/bootstrap/">
-                            <strong> MDBootstrap.com</strong>
-                        </a>
-                    </p>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-5 col-lg-4 ml-lg-0">
-
-                    <!-- Social buttons -->
-                    <div class="text-center text-md-right">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item">
-                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row -->
-
+        <!-- Footer Elements -->
+        <div class="container">
+    
+                <img class="card-img-top" src="./assets/images/footer.png">
         </div>
-        <!-- Footer Links -->
+        <!-- Footer Elements -->
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-danger">© 2019 Copyright:
+          <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/"> Killow.com</a>
+        </div>
+       >
+    
+      </footer>
+     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    </footer>
-    <!-- Footer -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+          // jQuery.ajaxPrefilter(function(options) {
+          //     if (options.crossDomain && jQuery.support.cors) {
+          //         options.url = 'https://cors-anywhere.herokuapp.com/' +
+          //             `${options.url}`;
+          //     }
+          // });
+          $.ajax({
+              url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
+              type: "GET",
+              data: {
+                  "$limit": "9999999",
+                  "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
+              },
+          }).done(function (response) {
+  
+              const arr = Object.keys(response).map((key) => [
+                  [key, response[[key]]]
+              ]);
+              console.log(arr);
+  
+              console.log("Retrieved " + response.length + " records from the dataset!");
+          })
+      </script>
+  
 
-
+        
 </body>
 
 
