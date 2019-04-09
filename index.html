@@ -275,9 +275,15 @@
         alert("Retrieved " + data.length + " records from the dataset!");
         console.log(data);
         for(i=0; i< data.length; i++){
+            if(data[i].location){
             console.log(data[i].description);
+            console.log(data[i].location.coordinates[0]);
+            console.log(data[i].location.coordinates[1]);
+            }
+
             //prints HOMICIDE/Non Neglige to console
-            //console.log(data.location.coordinates);
+            
+            //console.log(data[i].location.coordinates[1]);
             //property 'coordinates' of undefined
         }
 
