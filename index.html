@@ -269,8 +269,12 @@
 
         }
     }).done(function (data) {
-        
         alert("Retrieved " + data.length + " records from the dataset!");
+        for(i=0; i< data.length; i++){
+            console.log(data[i].description);//prints HOMICIDE/Non Neglige to console
+            console.log(data[i].location.coordinates);//property 'coordinates' of undefined
+        }
+
         // var newData = JSON.stringify(data);
         //console.log(data.location[1]["coordinates"]);
         // for (i= 0; i < coordinates.length; i++) {
