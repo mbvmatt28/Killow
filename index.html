@@ -245,6 +245,9 @@
     // console.log(encodedURI);
     //%3F%24query%3DSELECT%20description%2C%20location%20WHERE%20description%20LIKE%20'%25HOMICIDE%25'
     //%3F%24query%3DSELECT%20description%2C%20location%20WHERE%20description%20LIKE%20%27%25HOMICIDE%25%27
+
+    //Coordinates for KCMO//
+    //lat - 39.0997, -94.5786
     $.ajax({
         url: "https://data.kcmo.org/resource/nyg5-tzkz.json?",
         type: "GET",
@@ -270,9 +273,12 @@
         }
     }).done(function (data) {
         alert("Retrieved " + data.length + " records from the dataset!");
+        console.log(data);
         for(i=0; i< data.length; i++){
-            console.log(data[i].description);//prints HOMICIDE/Non Neglige to console
-            console.log(data[i].location.coordinates);//property 'coordinates' of undefined
+            console.log(data[i].description);
+            //prints HOMICIDE/Non Neglige to console
+            //console.log(data.location.coordinates);
+            //property 'coordinates' of undefined
         }
 
         // var newData = JSON.stringify(data);
