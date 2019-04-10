@@ -19,8 +19,6 @@ width: 125px;
 height: 125px relative;
 
 
-
-
 }
 
 body {
@@ -53,7 +51,7 @@ body {
     font-size: 60px;
 }
 
-h6 {
+h6, h4 {
     color: rgb(219, 60, 60);
     font-family: 'Nosifer', cursive;
 }
@@ -64,5 +62,6 @@ h6 {
 }
 
 h5 {
-    color: rgb(219, 60, 60);
+    color: white;
 }
+
