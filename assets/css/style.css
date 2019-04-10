@@ -2,21 +2,66 @@
     background-color: black;
 }
 
-#footer {
+footer {
 
-    background-color:rgb(77, 71, 71);
+    background-color:rgb(24, 23, 23);
+    font-weight: bold;
+
 }
 
 h1 {
     text-align: center;
+    font-family: 'Nosifer', cursive;
+    color: rgb(219, 60, 60);
 }
 #logo{
 width: 125px;
 height: 125px relative;
-padding: -10px;
-margin: -10px;
-display: flex;
-justify-content: space-around;
-margin-left: 45%;
+
 
 }
+
+body {
+    background-color: black;
+    font-weight: bold;
+
+}
+
+#head {
+    font-weight: bold;
+   margin-left: 38%;
+}
+
+.card {
+    background-color: black;
+    
+}
+
+#address-input  {
+    background-color: black;
+}
+
+.card-deck {
+    margin: 10px;
+}
+
+#d {
+    font-family: 'Nosifer', cursive;
+    color: rgb(219, 60, 60);
+    font-size: 60px;
+}
+
+h6, h4 {
+    color: rgb(219, 60, 60);
+    font-family: 'Nosifer', cursive;
+}
+
+#mm, #hm {
+    color: white;
+
+}
+
+h5 {
+    color: white;
+}
+
