@@ -103,90 +103,6 @@
         </div>
 
     </footer>
-<<<<<<< HEAD
-    <!-- Footer -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&callback=initMap">
-    </script>
-<script src="address.js"></script>
-
-<script>
-    // jQuery.ajaxPrefilter(function(options) {
-    //     if (options.crossDomain && jQuery.support.cors) {
-    //         options.url = 'https://cors-anywhere.herokuapp.com/' +
-    //             `${options.url}`;
-    //     }
-    // });
-    //  URL encoding: 
-    // const question = "%3F"
-    // const dollar = "%24"
-    // const space = "%20"
-    // const comma = "%2C"
-    // const equal = "%3D"
-    // const singleQuote = "%27"
-    // const percent = "%25"
-    // let urlEndpoint = "https://data.kcmo.org/resource/nyg5-tzkz.json"
-    // let query = "%3F%24query%3DSELECT%20description%2C%20location%20WHERE%20description%20LIKE%20%27%25HOMICIDE%25%27"
-    // const encodedURI = encodeURIComponent(query);
-    // console.log(encodedURI);
-    //%3F%24query%3DSELECT%20description%2C%20location%20WHERE%20description%20LIKE%20'%25HOMICIDE%25'
-    //%3F%24query%3DSELECT%20description%2C%20location%20WHERE%20description%20LIKE%20%27%25HOMICIDE%25%27
-
-    //Coordinates for KCMO//
-    //lat - 39.0997, -94.5786
-    $.ajax({
-        url: "https://data.kcmo.org/resource/nyg5-tzkz.json?",
-        type: "GET",
-        data: {
-            // //"X-SODA2-Fields": ["description", "location"],
-            // "X-SODA2-Types": ["text", "point"],
-            // "$$limit": 1000000,
-            "$query": "SELECT description, location WHERE description LIKE '%HOMICIDE%'",
-            "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO",
-            // "X-SODA2-Data-Out-Of-Date": false,
-            // "Server": "nginx",
-            // "Content-Type": "application/json;charset=UTF-8",
-            // "Transfer-Encoding": "chunked",
-            // "Connection": "keep-alive",
-            // "X-Socrata-RequestId": "5r30fwhxr2nfnz6e245puz1n",
-            // "Access-Control-Allow-Origin": "*",
-            // "ETag":"YnJhdm8uMTA1MDk1XzFfMjkySDZ4MWhJbVhkRTJYUGo0YVJQR1JfMVZZOVp3hN6fdm8uyAM3yoQ3tJaVoa6Ka7U-gzip--gzip",
-            // "Vary": "Accept-Encoding",
-            // "Content-Encoding": "gzip",
-            // "X-Socrata-Region":"aws-us-east-1-fedramp-prod",
-            // "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
-
-        }
-    }).done(function (data) {
-        alert("Retrieved " + data.length + " records from the dataset!");
-        console.log(data);
-        for(i=0; i< data.length; i++){
-            if(data[i].location){
-            console.log(data[i].description);
-            console.log(data[i].location.coordinates[0]);
-            console.log(data[i].location.coordinates[1]);
-            }
-
-            //prints HOMICIDE/Non Neglige to console
-            
-            //console.log(data[i].location.coordinates[1]);
-            //property 'coordinates' of undefined
-        }
-
-        // var newData = JSON.stringify(data);
-        //console.log(data.location[1]["coordinates"]);
-        // for (i= 0; i < coordinates.length; i++) {
-        //     console.log(data.location);
-        // }
-    });
-
-</script>
-=======
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -218,7 +134,6 @@
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 
     <script src="./autofill.js"></script>
->>>>>>> 4a6bd819766d880fab4074353ea56fff0f208602
 
 </body>
 
