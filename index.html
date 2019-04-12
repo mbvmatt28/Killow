@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="assets/images/fl.png">
     <link rel="shortcut icon" type="image/png" href="./assets/images/fl.png">
     <title>Killow</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Poller+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Nosifer" rel="stylesheet">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&libraries=places"></script>
 </head>
 
 
@@ -20,38 +21,41 @@
 <body>
 
     <header>
-        <div id= "head">
-            <a id="hm" class= "col-sm" style="font-size: 16px" href="index.html">Home</a>
-            <img href="index.html" class= "col-sm" id="logo" src="assets/images/fl.jpg" />
-            <a id="mm" class=" col-sm" style="font-size: 16px" href="mm.html">Murder Map</a>
+        <div id="head">
+            <a id="hm" class="col-sm" href="index.html">Home</a>
+            <img href="index.html" class="col-sm" id="logo" src="assets/images/fl.jpg" />
+            <a id="mm" class=" col-sm"     href="mm.html">Murder Map</a>
         </div>
     </header>
 
 
 
-    <div class="card bg-dark text-white border border-0">
+    <div id="cc" class="card bg-dark text-white border border-0">
         <img src="./assets/images/hh7.jpg" class="ah-img" alt="...">
         <div class="card-img-overlay">
             <br>
-            <h4 id="d" class="card-title" style="padding: 10px; text-align: center; font-weight: bold;">
-                   Houses to die for</h4>
-           <br>
-            <input id="address-input" class="padding: 10px; form-control form-control-lg"
-                style="width: 60%; margin: auto" type="text" placeholder="Enter address if you dare...">
+            <h4 id="d" class="card-titl" style="padding: 10px; text-align: center; font-weight: bold;">
+                Houses to die for</h4>
+            <br>
+            <br>
+            <br>
+            <input id="autocomplete" class="padding: 10px; form-control form-control-lg"
+                style="width: 60%; margin: auto" type="text" placeholder="Enter address if you dare..."/>
+                
 
         </div>
     </div>
     <br>
-    <h6 class="card-text" style="padding: 10px; text-align: center; font-size: 30px">
-            They'll leave you breathless.</h6>
-    
     <br>
-    
+    <h6 id="bb" class="card-tex">
+        They'll leave you breathless.</h6>
 
-   
+       
+
+
 
     </div>
-
+  
     <br><br>
 
     <div class="card-deck">
@@ -74,7 +78,7 @@
         <div class="card">
             <img class="card-img-top" src="./assets/images/dz.jpeg" style=" height: 270px; width: 425px">
             <div class="card-body">
-                <h5 class="card-title">Danger Zone</h5>
+                <h5 class="card-title">Kill Zone</h5>
                 <p class="card-text">This zip code has the most murders. Proceed with caution.</p>
             </div>
             <a href="#" class="btn btn-danger">Search</a>
@@ -83,57 +87,54 @@
 
 
 
-   <br><br>
+    <br><br>
 
 
-   
-<footer class="page-footer font-small special-color-dark pt-4 text danger">
 
-        <!-- Footer Elements -->
+    <footer class="page-footer font-small special-color-dark pt-4 text danger">
+
+
         <div class="container">
-    
-                <img class="card-img-top" src="./assets/images/footer.png">
+
+            <img class="card-img-top" src="./assets/images/footer.png">
         </div>
-        <!-- Footer Elements -->
-    
-        <!-- Copyright -->
         <div class="footer-copyright text-center text-danger">© 2019 Copyright:
-          <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/"> Killow.com</a>
+            <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/"> Killow.com</a>
         </div>
-       >
-    
-      </footer>
-     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script>
-          // jQuery.ajaxPrefilter(function(options) {
-          //     if (options.crossDomain && jQuery.support.cors) {
-          //         options.url = 'https://cors-anywhere.herokuapp.com/' +
-          //             `${options.url}`;
-          //     }
-          // });
-          $.ajax({
-              url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
-              type: "GET",
-              data: {
-                  "$limit": "9999999",
-                  "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
-              },
-          }).done(function (response) {
-  
-              const arr = Object.keys(response).map((key) => [
-                  [key, response[[key]]]
-              ]);
-              console.log(arr);
-  
-              console.log("Retrieved " + response.length + " records from the dataset!");
-          })
-      </script>
-  
+    </footer>
 
-        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // jQuery.ajaxPrefilter(function(options) {
+        //     if (options.crossDomain && jQuery.support.cors) {
+        //         options.url = 'https://cors-anywhere.herokuapp.com/' +
+        //             `${options.url}`;
+        //     }
+        // });
+        $.ajax({
+            url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
+            type: "GET",
+            data: {
+                "$limit": "9999999",
+                "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
+            },
+        }).done(function (response) {
+
+            const arr = Object.keys(response).map((key) => [
+                [key, response[[key]]]
+            ]);
+            console.log(arr);
+
+            console.log("Retrieved " + response.length + " records from the dataset!");
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+
+    <script src="./address.js"></script>
+
 </body>
 
 
