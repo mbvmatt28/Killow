@@ -1,60 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
-    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="map.css"/>
-    <link rel="shortcut icon" type="image/png" href="./assets/images/fl.jpg"/>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Nosifer" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script rel="text/javascript" src="./style.js"></script>
-    <script rel="text.css" src="./map.css"></script>
-    <title>Killow</title>
-  </head>
-<<<<<<< HEAD
-  <script src="style.js"></script>
-  <div id="map"></div>
-  <script>
-    function initMap() {
-      //Map Options
 
-      var options = {
-        zoom: 10,
-        center: { lat: 39.0997, lng: -94.5786 },
-        styles: styles
-      }
-      //New Map
-      var map = new
-        google.maps.Map(document.getElementById('map'), options)
-      $.ajax({
-        url: "https://data.kcmo.org/resource/nyg5-tzkz.json?",
-        type: "GET",
-        data: {
-          "$query": "SELECT description, location WHERE description LIKE '%HOMICIDE%'",
-          "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO",
-        }
-      }).done(function (data) {
-        alert("Retrieved " + data.length + " records from the dataset!");
-        console.log(data);
-        for (i = 0; i < data.length; i++) {
-          if (data[i].location) {
-            //console.log(data[i].description);
-            var lng = (data[i].location.coordinates[0]);
-            var lat = (data[i].location.coordinates[1]);
-            addMarker({lng, lat})
-=======
-  <body>
-    <header>
-      <div id="head">
-          <a id="hm" class="col-sm" href="index.html">Home</a>
-          <img href="index.html" class="col-sm" id="logo" src="assets/images/fl.jpg" />
-          <a id="mm" class=" col-sm"     href="mm.html">Murder Map</a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="map.css" />
+  <link rel="shortcut icon" type="image/png" href="./assets/images/fl.jpg" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script rel="text/javascript" src="./style.js"></script>
+  <script rel="text.css" src="./map.css"></script>
+  <title>Killow</title>
+</head>
+
+<body>
+  <header>
+    <div id="head">
+      <a id="hm" class="col-sm" style="font-size: 16px" href="index.html">Home</a>
+      <img href="index.html" class="col-sm" id="logo" src="assets/images/fl.jpg" />
+      <a id="mm" class=" col-sm" style="font-size: 16px" href="mm.html">Murder Map</a>
+    </div>
   </header>
+
+
+  <body>
     <script src="style.js"></script>
     <div id="map"></div>
     <script>
@@ -72,11 +45,10 @@
           url: "https://data.kcmo.org/resource/nyg5-tzkz.json?",
           type: "GET",
           data: {
-            "$query":"SELECT description, location WHERE description LIKE '%HOMICIDE%'",
+            "$query": "SELECT description, location WHERE description LIKE '%HOMICIDE%'",
             $$app_token: "TRCaZxpAuvpOqRAYYPamdgcBO"
->>>>>>> 4a6bd819766d880fab4074353ea56fff0f208602
           }
-        }).done(function(data) {
+        }).done(function (data) {
           console.log("Retrieved " + data.length + " records from 2018 Crime Data!");
           for (i = 0; i < data.length; i++) {
             if (data[i].location) {
@@ -95,7 +67,7 @@
             "$query": "SELECT description, location_1 WHERE description LIKE '%HOMICIDE%'",
             $$app_token: "TRCaZxpAuvpOqRAYYPamdgcBO"
           }
-        }).done(function(data) {
+        }).done(function (data) {
           console.log("Retrieved " + data.length + " records from 2017 Crime Data!");
           for (i = 0; i < data.length; i++) {
             if (data[i].location_1) {
@@ -111,10 +83,10 @@
           url: "https://data.kcmo.org/resource/c6e8-258d.json",
           type: "GET",
           data: {
-            "$query":"SELECT description, location_1 WHERE description LIKE '%HOMICIDE%'",
+            "$query": "SELECT description, location_1 WHERE description LIKE '%HOMICIDE%'",
             $$app_token: "TRCaZxpAuvpOqRAYYPamdgcBO"
           }
-        }).done(function(data) {
+        }).done(function (data) {
           console.log("Retrieved " + data.length + " records from 2016 Crime Data!");
           for (i = 0; i < data.length; i++) {
             if (data[i].location_1) {
@@ -125,24 +97,43 @@
             }
           }
         });
+        // var inputPoint = getItem://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
+
 
         $.ajax({
           url: "https://data.kcmo.org/resource/geta-wrqs.json",
           type: "GET",
           data: {
-            "$query":"SELECT description, location_1 WHERE description LIKE '%HOMICIDE%'",
+            "$query": "SELECT description, location_1 WHERE description LIKE '%HOMICIDE%'",
             $$app_token: "TRCaZxpAuvpOqRAYYPamdgcBO"
           }
-        }).done(function(data) {
-          console.log("Retrieved " + data.length + " records from 2015 Crime Data!");
-          for (i = 0; i < data.length; i++) {
-            if (data[i].location_1) {
-              //console.log(data[i].description);
-              var lng = data[i].location_1.coordinates[0];
-              var lat = data[i].location_1.coordinates[1];
-              addMarker({ lng, lat });
+        })
+          .done(function (data) {
+            console.log("Retrieved " + data.length + " records from 2015 Crime Data!");
+            for (i = 0; i < data.length; i++) {
+              if (data[i].location_1) {
+                //console.log(data[i].description);
+                var lng = data[i].location_1.coordinates[0];
+                var lat = data[i].location_1.coordinates[1];
+                addMarker({ lng, lat });
+              }
             }
-          }
+          })
+
+        var geoAPI = "&key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA";
+        var inputLocation = localStorage.getItem("location")
+        $.ajax({
+          url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + inputLocation + geoAPI,
+          type: "GET",
+        }).done(function (data) {
+          console.log(data.results);
+          // for (i = 0; i < data.length; i++) {
+          //   if (data[i].location_1) {
+          //     //console.log(data[i].description);
+          var lat = (data.results[0].geometry.location.lat);
+          var lng = (data.results[0].geometry.location.lng);
+          addMarker2({ lng, lat });
+          //     var lat = data[i].location_1.coordinates[1];
         });
 
         function addMarker(props) {
@@ -156,11 +147,21 @@
             var infoWindow = new google.maps.InfoWindow({
               content: props.content
             });
-            marker.addListener("click", function() {
+            marker.addListener("click", function () {
               infoWindow.open(map, marker);
             });
           }
         }
+        function addMarker2(props) {
+          console.log(props);
+          var marker = new
+            google.maps.Marker({
+              position: props,
+              map: map,
+              icon: 'https://images.vexels.com/media/users/3/142675/isolated/preview/84e468a8fff79b66406ef13d3b8653e2-house-location-marker-icon-by-vexels.png'
+
+            });
+        };
       }
       //Array of coords
       // var lng = [data[i].location.coordinates[0]];
@@ -183,21 +184,61 @@
       //  }
 
       //Add Marker Function
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&callback=initMap"></script>
-    <br /><br />
-    <footer class="page-footer font-small special-color-dark pt-4 text danger">
-      <!-- Footer Elements -->
-      <div class="container">
-        <img class="card-img-top" src="./assets/images/footer.png" />
-      </div>
-      <!-- Copyright -->
-      <div class="footer-copyright text-center text-danger">
-        © 2019 Copyright:
-        <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/">Killow.com</a>
-      </div>
-    </footer>
-  </body>
-  </html>
-      
+      console.log(localStorage.getItem("location"))
+      function addMarker(props) {
+        console.log(props);
+        var marker = new
+          google.maps.Marker({
+            position: props,
+            map: map,
 
+          });
+
+        if (props.content) {
+          var infoWindow = new
+            google.maps.InfoWindow({
+              content: props.content
+            });
+          marker.addListener('click', function () {
+            infoWindow.open(map, marker);
+          })
+        }
+      }
+
+
+
+    </script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&callback=initMap">
+      </script>
+    <script src="input.js"></script>
+
+
+    <br><br>
+
+
+
+
+
+    <footer class="page-footer font-small special-color-dark pt-4 text danger">
+
+
+      <div class="container">
+
+        <img class="card-img-top" src="./assets/images/footer.png">
+      </div>
+      <div class="footer-copyright text-center text-danger">© 2019 Copyright:
+        <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/"> Killow.com</a>
+      </div>
+
+    </footer>
+
+
+
+
+
+
+  </body>
+
+</html>

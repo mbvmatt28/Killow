@@ -40,7 +40,7 @@
             <br>
             <br>
             <input id="autocomplete" class="padding: 10px; form-control form-control-lg"
-                style="width: 60%; margin: auto" type="text" placeholder="Enter address if you dare..."/>
+                style="width: 60%; margin: auto" type="text" href="https://mbvmatt28.github.io/Killow/mm.html" placeholder="Enter address if you dare..."/>
                 
 
         </div>
@@ -107,33 +107,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        // jQuery.ajaxPrefilter(function(options) {
-        //     if (options.crossDomain && jQuery.support.cors) {
-        //         options.url = 'https://cors-anywhere.herokuapp.com/' +
-        //             `${options.url}`;
-        //     }
-        // });
-        $.ajax({
-            url: "https://data.kcmo.org/resource/nyg5-tzkz.json",
-            type: "GET",
-            data: {
-                "$limit": "9999999",
-                "$$app_token": "TRCaZxpAuvpOqRAYYPamdgcBO"
-            },
-        }).done(function (response) {
-
-            const arr = Object.keys(response).map((key) => [
-                [key, response[[key]]]
-            ]);
-            console.log(arr);
-
-            console.log("Retrieved " + response.length + " records from the dataset!");
-        })
-    </script>
+ 
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 
     <script src="./autofill.js"></script>
+    <script src="input.js"></script>
 
 </body>
 
