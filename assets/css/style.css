@@ -2,21 +2,159 @@
     background-color: black;
 }
 
-#footer {
+footer {
 
-    background-color:rgb(77, 71, 71);
+    background-color:rgb(24, 23, 23);
+    font-weight: bold;
+
 }
 
 h1 {
     text-align: center;
+    font-family: 'Nosifer', cursive;
+    color: rgb(219, 60, 60);
 }
 #logo{
 width: 125px;
 height: 125px relative;
-padding: -10px;
-margin: -10px;
-display: flex;
-justify-content: space-around;
-margin-left: 45%;
+
 
 }
+
+body {
+    background-color: black;
+    font-weight: bold;
+
+}
+
+#head {
+    
+   margin-left: 38%;
+}
+
+.card {
+    background-color: black;
+    
+}
+
+#autocomplete  {
+    background-color: black;
+}
+
+.card-deck {
+    margin: 10px;
+}
+
+#d {
+    font-family: 'Nosifer', cursive;
+    color: rgb(219, 60, 60);
+    font-size: 60px;
+}
+
+h6{
+    padding: 10px; 
+    text-align: center; 
+    font-size: 30px;
+    color: rgb(219, 60, 60);
+   
+}
+
+
+ h4 {
+    color: rgb(219, 60, 60);
+    font-family: 'Nosifer', cursive;
+}
+
+
+h5, p, #hm, #mm {
+    color: rgb(116, 112, 112);
+    font-family: 'Amatic SC', cursive;
+
+}
+
+#hm , #mm {
+    font-size: 30px; 
+}
+
+hr {
+    border-bottom: 6px solid  rgb(219, 60, 60);
+     }
+
+     
+@media screen and (max-width: 980px) and (min-width: 769px) {
+    #main-container {
+      max-width: 650px;
+      float: left;
+      margin-bottom: 70%;
+      margin-left: 3%;
+    }
+    p:last-child {
+      display: none;
+      
+    }
+    .auth-image {
+   
+     margin: 5%;
+    }
+   }
+
+   @media screen and (max-width: 768px) and (min-width: 641px) {
+    
+        .ah-img {
+            width: 750px;
+            height:300px;
+        }
+    #d {
+        font-size: 40px;
+    }
+    .card-text {
+        font-size: 15px;
+    }
+    #autocomplete {
+        padding: 0;
+        width : 40%;
+        font-size: 15px;
+        }
+    
+    .card-title {
+        font-size : 15px;
+    }
+
+    .card-text {
+        font-size: 13px;     
+    }
+    
+    #head {   
+         margin-left: 30%;
+    }
+}
+   
+    @media screen and (max-width: 640px) and (min-width: 441px) {
+   
+        
+            .ah-img {
+                width: 750px;
+                height:300px;
+            }
+        #d {
+            font-size: 40px;
+        }
+       h6 {
+            font-size: 20px;
+        }
+        #autocomplete {
+            padding: 0;
+            width : 40%;
+            font-size: 15px;
+            }
+        
+
+        #head {    margin-left: 25%;
+        }
+   
+    }
+   
+     
+   
+   
+   
