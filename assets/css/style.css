@@ -14,6 +14,7 @@ h1 {
     font-family: 'Nosifer', cursive;
     color: rgb(219, 60, 60);
 }
+
 #logo{
 width: 125px;
 height: 125px relative;
@@ -43,6 +44,11 @@ body {
 
 .card-deck {
     margin: 10px;
+    font-size: 20px;
+}
+
+.card-title {
+    font-size: 30px;
 }
 
 #d {
@@ -54,8 +60,9 @@ body {
 h6{
     padding: 10px; 
     text-align: center; 
-    font-size: 30px;
     color: rgb(219, 60, 60);
+    font-family: 'Nosifer', cursive;
+    font-size: 30px;
    
 }
 
