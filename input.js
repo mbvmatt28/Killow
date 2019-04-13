@@ -32,7 +32,7 @@ $(document).ready(function() {
         google.maps.Marker({
           position: props,
           map: map,
-          icon: "http://maps.google.com/mapfiles/ms/icons/black-dot.png",
+          icon: "https://static.thenounproject.com/png/4096-200.png",
           
         });
   
