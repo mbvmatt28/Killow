@@ -32,7 +32,7 @@ $(document).ready(function() {
         google.maps.Marker({
           position: props,
           map: map,
-          icon: "https://static.thenounproject.com/png/4096-200.png",
+          icon: "https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/location-128.png",
           
         });
   
