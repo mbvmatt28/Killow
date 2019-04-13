@@ -25,7 +25,6 @@ $(document).ready(function() {
         }
     });
   });
-
   
     function addMarker2(props) {
       console.log(props);
@@ -33,11 +32,9 @@ $(document).ready(function() {
         google.maps.Marker({
           position: props,
           map: map,
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 10
-    
-        }});
+          icon: google.maps.SymbolPath.CIRCLE
+          
+        });
   
       if (props.content) {
         var infoWindow = new
