@@ -32,7 +32,7 @@ $(document).ready(function() {
         google.maps.Marker({
           position: props,
           map: map,
-          icon: google.maps.SymbolPath.CIRCLE
+          icon: "http://maps.google.com/mapfiles/ms/icons/black-dot.png",
           
         });
   
