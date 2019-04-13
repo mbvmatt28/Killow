@@ -36,8 +36,8 @@ $(document).ready(function() {
           icon: {
             path: google.maps.SymbolPath.CIRCLE,
             scale: 10
-          
-        });
+    
+        }});
   
       if (props.content) {
         var infoWindow = new
