@@ -163,7 +163,7 @@ hr {
    
     }
    
-      @media screen and (max-width: 466px) {
+      @media screen and (max-width: 440px)  and (min-width: 360px)  {
    
         
             .ah-img {
