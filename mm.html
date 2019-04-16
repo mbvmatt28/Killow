@@ -19,20 +19,30 @@
 
 
 <body>
-  <header>
     <div id="head">
       <a id="hm" class="col-sm" href="index.html">Home</a>
       <img href="index.html" class="col-sm" id="logo" src="assets/images/fl.jpg" />
       <a id="mm" class=" col-sm" href="mm.html">Murder Map</a>
     </div>
 
-  
-    <script src="style.js"></script>
     <div id="map"></div>
+    <footer class="page-footer font-small special-color-dark pt-4 text danger">
+        <div class="container">
+          <img class="card-img-top" src="./assets/images/footer.png">
+        </div>
+        <div class="footer-copyright text-center text-danger">© 2019 Copyright:
+          <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/"> Killow.com</a>
+        </div>
+      </footer>
+  
+<script src="style.js"></script>    
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&callback=initMap">
+</script>
+<script src="input.js"></script>
+<br><br>  
     <script>
       function initMap() {
         //Map Options
-
         var options = {
           zoom: 10,
           center: { lat: 39.0997, lng: -94.5786 },
@@ -40,6 +50,7 @@
         };
         //New Map
         var map = new google.maps.Map(document.getElementById("map"), options);
+        // 2018 End Point //
         $.ajax({
           url: "https://data.kcmo.org/resource/nyg5-tzkz.json?",
           type: "GET",
@@ -59,6 +70,7 @@
           }
         });
 
+        // 2018 End Point //
         $.ajax({
           url: "https://data.kcmo.org/resource/wy8a-bydn.json",
           type: "GET",
@@ -77,7 +89,7 @@
             }
           }
         });
-
+        // 2017 End Point //
         $.ajax({
           url: "https://data.kcmo.org/resource/c6e8-258d.json",
           type: "GET",
@@ -96,9 +108,7 @@
             }
           }
         });
-        // var inputPoint = getItem://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
-
-
+        // 2016 End Point //
         $.ajax({
           url: "https://data.kcmo.org/resource/geta-wrqs.json",
           type: "GET",
@@ -118,30 +128,26 @@
               }
             }
           })
-
+        
+        // GeoCoding the address from Local Storage for Long & Lat //
         var geoAPI = "&key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA";
         var inputLocation = localStorage.getItem("location")
         $.ajax({
           url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + inputLocation + geoAPI,
           type: "GET",
         }).done(function (data) {
-          console.log(data.results);
-          // for (i = 0; i < data.length; i++) {
-          //   if (data[i].location_1) {
-          //     //console.log(data[i].description);
+          //console.log(data.results);
           var lat = (data.results[0].geometry.location.lat);
           var lng = (data.results[0].geometry.location.lng);
           addMarker2({ lng, lat });
-          //     var lat = data[i].location_1.coordinates[1];
         });
-
+        // Function to Add Homicde Markers from KCPD Endpoints //
         function addMarker(props) {
           //console.log(props);
           var marker = new google.maps.Marker({
             position: props,
             map: map
           });
-
           if (props.content) {
             var infoWindow = new google.maps.InfoWindow({
               content: props.content
@@ -151,46 +157,25 @@
             });
           }
         }
+        // Function to Add Marker from User Input After From Local Storage //
         function addMarker2(props) {
           console.log(props);
           var marker = new
             google.maps.Marker({
               position: props,
               map: map,
-              icon: 'https://images.vexels.com/media/users/3/142675/isolated/preview/84e468a8fff79b66406ef13d3b8653e2-house-location-marker-icon-by-vexels.png'
-
+              icon: 'https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/location-128.png',
             });
         };
       }
-      //Array of coords
-      // var lng = [data[i].location.coordinates[0]];
-      //  var lat = [data[i].location.coordinates[1]]
-      //Array of Markers
-      // var markers = [
-      //   {
-      //   coords: { lat: 39.332761, lng: -94.312678 },
-      //     content: '<img src="assets/images/Scary-Houses-in-Bangalore.jpg" style="height: 200px ; width: 250px; alt="Scary House">'
-      //   },
-      //   {
-      //     coords: {// lat: 39.032761, lng: -94.512678 },
-      //     content: '<img src="assets/images/fl.jpg" style="height: 200px ; width: 250px; alt="Scary House2">'
-      //   },
-      // ];
-
-      //Loop through markers
-      //for (var i = 0; i < markers.length; i++) {
-      //   addMarker(markers[i]);
-      //  }
-
       //Add Marker Function
-      console.log(localStorage.getItem("location"))
+      //console.log(localStorage.getItem("location"))
       function addMarker(props) {
         console.log(props);
         var marker = new
           google.maps.Marker({
             position: props,
             map: map,
-
           });
 
         if (props.content) {
@@ -203,41 +188,26 @@
           })
         }
       }
-
-
-
     </script>
 
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&callback=initMap">
-      </script>
-    <script src="input.js"></script>
 
-
-    <br><br>
-
-
-
-
-
-    <footer class="page-footer font-small special-color-dark pt-4 text danger">
-
-
-      <div class="container">
-
-        <img class="card-img-top" src="./assets/images/footer.png">
-      </div>
-      <div class="footer-copyright text-center text-danger">© 2019 Copyright:
-        <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/"> Killow.com</a>
-      </div>
-
-    </footer>
-
-
-
-
-
-
-  </body>
-
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
