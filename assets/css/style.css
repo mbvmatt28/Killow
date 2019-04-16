@@ -162,7 +162,7 @@ hr {
    
     }
    
-      @media screen and (max-width: 466px) {
+      @media screen and (max-width: 440px) {
    
         
             .ah-img {
@@ -182,7 +182,7 @@ hr {
             }
         
 
-        #head {    margin-left: 15%;
+        #head {    margin-left: 10%;
         }
    
     }
