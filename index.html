@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:image" content="assets/images/fl.png">
-    <link rel="shortcut icon" type="image/png" href="./assets/images/fl.png">
-    <title>Killow</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Nosifer" rel="stylesheet">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&libraries=places"></script>
-</head>
-
-
-
-<body>
-
-    <header>
-        <div id="head">
-            <a id="hm" class="col-sm" href="index.html">Home</a>
-            <img href="index.html" class="col-sm" id="logo" src="assets/images/fl.jpg" />
-            <a id="mm" class=" col-sm"     href="mm.html">Murder Map</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta property="og:image" content="assets/images/fl.png">
+        <link rel="shortcut icon" type="image/png" href="./assets/images/fl.png">
+        <title>Killow</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Nosifer" rel="stylesheet">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVPtlKIIhwsJRmMiUtEvQKjgBlzEZ1ZfA&libraries=places"></script>
+    </head>
+    <body>
+        <header>
+            <div id="head">
+                <a id="hm" class="col-sm" href="index.html">Home</a>
+                <img href="index.html" class="col-sm" id="logo" src="assets/images/fl.jpg" />
+                <a id="mm" class=" col-sm"     href="mm.html">Murder Map</a>
+            </div>
+        </header>
+        <div id="cc" class="card bg-dark text-white border border-0">
+            <img src="./assets/images/hh7.jpg" class="ah-img" alt="...">
+            <div class="card-img-overlay">
+                <br>
+                <h4 id="d" class="card-titl" style="padding: 10px; text-align: center; font-weight: bold;">
+                    Houses to die for</h4>
+                <br>
+                <br>
+                <br>
+                <input id="autocomplete" class="padding: 10px; form-control form-control-lg"
+                    style="width: 60%; margin: auto; font-family: 'Amatic SC', cursive; font-size: 30px;" type="text" href="https://mbvmatt28.github.io/Killow/mm.html" placeholder="Enter address if you dare..."/>
+            </div>
         </div>
-    </header>
+        <br><br>
+        <h6 id="bb" class="card-tex">
+            They'll leave you breathless.</h6>
+        </div>
+        <br><br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="./assets/images/mh.jpg" style=" height: 270px; width: 425px">
+                <div class="card-body">
+                    <h5 class="card-title">Murder House</h5>
+                    <p class="card-text">This house has the highest murder count in the city.</p>
+                </div>
+                <a href="#" class="btn btn-danger">Search</a>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="./assets/images/fb.jpg" style=" height: 270px; width: 425px">
+                <div class="card-body">
+                    <h5 class="card-title">Fresh blood</h5>
+                    <p class="card-text">The most recent homicide happened here.</p>
+                </div>
+                <a href="#" class="btn btn-danger">Search</a>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="./assets/images/dz.jpeg" style=" height: 270px; width: 425px">
+                <div class="card-body">
+                    <h5 class="card-title">Kill Zone</h5>
+                    <p class="card-text">This zip code has the most murders. Proceed with caution.</p>
+                </div>
+                <a href="#" class="btn btn-danger">Search</a>
+            </div>
+        </div>
+        <br><br>
+        <footer class="page-footer font-small special-color-dark pt-4 text danger">
+        <div class="container">
+                <img class="card-img-top" src="./assets/images/footer.png">
+            </div>
+            <div class="footer-copyright text-center text-danger">© 2019 Copyright:
+                <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/"> Killow.com</a>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+        <script src="./autofill.js"></script>
+        <script src="input.js"></script>
+    </body>
+    </html>
+    
+     
+    
+    
+           
 
 
-
+<<<<<<< HEAD
     <div id="cc" class="card bg-dark text-white border border-0">
         <img src="./assets/images/hh7.jpg" class="ah-img" alt="...">
         <div class="card-img-overlay">
@@ -42,82 +102,35 @@
             <input id="autocomplete" class="padding: 10px; form-control form-control-lg"
                 style="width: 60%; margin: auto; font-family: 'Amatic SC', cursive;" type="text" href="https://mbvmatt28.github.io/Killow/mm.html" placeholder="Enter address if you dare..."/>
                 
+=======
+>>>>>>> 825e09004cd7135dc2b7bff7a43a8caeae3919bf
 
-        </div>
-    </div>
-    <br>
-    <br>
-    <h6 id="bb" class="card-tex">
-        They'll leave you breathless.</h6>
 
-       
+                
 
 
 
-    </div>
+
+
+
+
+
   
-    <br><br>
-
-    <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="./assets/images/mh.jpg" style=" height: 270px; width: 425px">
-            <div class="card-body">
-                <h5 class="card-title">Murder House</h5>
-                <p class="card-text">This house has the highest murder count in the city.</p>
-            </div>
-            <a href="#" class="btn btn-danger">Search</a>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="./assets/images/fb.jpg" style=" height: 270px; width: 425px">
-            <div class="card-body">
-                <h5 class="card-title">Fresh blood</h5>
-                <p class="card-text">The most recent homicide happened here.</p>
-            </div>
-            <a href="#" class="btn btn-danger">Search</a>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="./assets/images/dz.jpeg" style=" height: 270px; width: 425px">
-            <div class="card-body">
-                <h5 class="card-title">Kill Zone</h5>
-                <p class="card-text">This zip code has the most murders. Proceed with caution.</p>
-            </div>
-            <a href="#" class="btn btn-danger">Search</a>
-        </div>
-    </div>
-
-
-
-    <br><br>
-
-
-
-    <footer class="page-footer font-small special-color-dark pt-4 text danger">
-
-
-        <div class="container">
-
-            <img class="card-img-top" src="./assets/images/footer.png">
-        </div>
-        <div class="footer-copyright text-center text-danger">© 2019 Copyright:
-            <a class="website text-danger" href="https://mdbootstrap.com/education/bootstrap/"> Killow.com</a>
-        </div>
-
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- 
-    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-
-    <script src="./autofill.js"></script>
-    <script src="input.js"></script>
-
-</body>
 
 
 
 
 
 
-</html>
+
+    
+    
+    
+    
+
+
+
+
+
+
+
