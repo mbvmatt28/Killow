@@ -41,6 +41,7 @@ body {
 #autocomplete  {
     background-color: black;
     font-size: 30px;
+    width: 60%; 
 }
 
 .card-deck {
@@ -162,27 +163,27 @@ hr {
    
     }
    
-      @media screen and (max-width: 440px) {
+      @media screen and (max-width: 466px) {
    
         
             .ah-img {
-                width: 650px;
-                height:300px;
+                width: 450px;
+                height:200px;
             }
         #d {
-            font-size: 30px;
+            font-size: 25px;
         }
        #bb {
             font-size: 15px;
         }
         #autocomplete {
             padding: 0;
-            width : 30%;
+            width : 40%;
             font-size: 20px;
             }
         
 
-        #head {    margin-left: 10%;
+        #head {    margin-left: 13%;
         }
    
     }
