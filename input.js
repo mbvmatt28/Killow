@@ -25,24 +25,25 @@ $(document).ready(function() {
         }
     });
   });
-    function addMarker2(props) {
-      console.log(props);
-      var marker = new
-        google.maps.Marker({
-          position: props,
-          map: map,
-          icon: 'https://cdn.iconscout.com/icon/premium/png-256-thumb/place-marker-3-599570.png'
-          
+  function addMarker2(props) {
+    console.log(props);
+    var marker = new
+      google.maps.Marker({
+        position: props,
+        map: map,
+        icon: "https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/location-128.png",
+        
+      });
+
+    if (props.content) {
+      var infoWindow = new
+        google.maps.InfoWindow({
+          content: props.content
         });
-  
-      if (props.content) {
-        var infoWindow = new
-          google.maps.InfoWindow({
-            content: props.content
-          });
-        marker.addListener('click', function () {
-          infoWindow.open(map, marker);
-        })
-      }
+      marker.addListener('click', function () {
+        infoWindow.open(map, marker);
+      })
     }
+  }
+
   
